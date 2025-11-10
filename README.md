@@ -1,26 +1,95 @@
-Iris Dataset Analysis and Classification
-This notebook performs an exploratory data analysis on the Iris dataset and trains several classification models to predict the species of iris flowers based on their measurements.
+# 🌸 Iris Dataset Analysis and Classification
 
-Table of Contents
-Introduction
-Dataset Loading and Preparation
-Exploratory Data Analysis
-Model Training
-Model Evaluation
-1. Introduction
-This notebook demonstrates a typical machine learning workflow using the famous Iris dataset. The goal is to classify iris flowers into one of three species (setosa, versicolor, or virginica) based on four features: sepal length, sepal width, petal length, and petal width.
+This project performs **exploratory data analysis (EDA)** on the classic **Iris dataset** and trains multiple **machine learning models** to classify iris flower species based on their physical measurements.
 
-2. Dataset Loading and Preparation
-The Iris dataset is loaded using sklearn.datasets.load_iris. The data is then converted into a pandas DataFrame for easier manipulation and analysis. The target variable (species) is added as a new column to the DataFrame.
+---
 
-3. Exploratory Data Analysis
-Basic descriptive statistics of the dataset are calculated and displayed. Histograms of the features are generated to visualize their distributions. A scatter plot of sepal length vs. petal length is also created to explore the relationship between these two features.
+## 📋 Table of Contents
+1. [Introduction](#introduction)
+2. [Dataset Loading and Preparation](#dataset-loading-and-preparation)
+3. [Exploratory Data Analysis](#exploratory-data-analysis)
+4. [Model Training](#model-training)
+5. [Model Evaluation](#model-evaluation)
+6. [Technologies Used](#technologies-used)
+7. [How to Run](#how-to-run)
+8. [Results](#results)
+9. [License](#license)
 
-4. Model Training
-The dataset is split into training and testing sets. The features are scaled using StandardScaler to ensure that all features have a similar range, which can improve the performance of some models. Three classification models are trained:
+---
 
-Support Vector Classifier (SVC)
-Random Forest Classifier
-Logistic Regression
-5. Model Evaluation
-The trained models are evaluated on the test set using confusion matrices and classification reports. The performance of each model is printed, including precision, recall, f1-score, and support for each class. Confusion matrices are visualized using heatmaps to show the number of correct and incorrect predictions for each class.
+## 🌱 Introduction
+The **Iris dataset** is one of the most well-known datasets in the field of machine learning.  
+The goal of this project is to **classify iris flowers into three species** — *Setosa*, *Versicolor*, and *Virginica* — using four key features:
+
+- Sepal Length  
+- Sepal Width  
+- Petal Length  
+- Petal Width  
+
+This notebook demonstrates a **complete ML workflow**, from data loading and visualization to model training and evaluation.
+
+---
+
+## 📊 Dataset Loading and Preparation
+The dataset is loaded using the `sklearn.datasets.load_iris()` function and converted into a **pandas DataFrame** for easy manipulation.  
+A target column (`species`) is added, mapping each flower’s numeric label to its corresponding class name.
+
+Steps:
+1. Load dataset using `scikit-learn`
+2. Convert to DataFrame
+3. Add target labels
+4. Prepare features (`X`) and target (`y`)
+
+---
+
+## 🔍 Exploratory Data Analysis
+To understand the dataset better, several analyses and visualizations were performed:
+
+- Summary statistics using `pandas.describe()`
+- Histograms for each feature to view their distributions
+- Scatter plots (e.g., sepal length vs. petal length)
+- Correlation analysis between features
+
+These steps help in identifying patterns, separability between classes, and potential feature importance.
+
+---
+
+## 🧠 Model Training
+The dataset is split into **training and testing sets** (typically 80/20).  
+Feature scaling is applied using `StandardScaler` to normalize the data.  
+Three classification models are trained and compared:
+
+1. **Support Vector Classifier (SVC)**  
+2. **Random Forest Classifier**  
+3. **Logistic Regression**
+
+Each model is trained on the scaled training data and later tested for performance.
+
+---
+
+## 📈 Model Evaluation
+Models are evaluated using multiple metrics:
+
+- **Confusion Matrix**
+- **Classification Report** (Precision, Recall, F1-Score)
+- **Accuracy Score**
+
+Confusion matrices are visualized using **heatmaps** for clarity.  
+Performance metrics help determine which model best distinguishes between the iris species.
+
+---
+
+## 🧰 Technologies Used
+- Python 3.x  
+- NumPy  
+- Pandas  
+- Matplotlib / Seaborn  
+- Scikit-learn (sklearn)  
+
+---
+
+## ⚙️ How to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/iris-classification.git
+   cd iris-classification
